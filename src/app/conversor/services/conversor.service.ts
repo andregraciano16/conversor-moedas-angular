@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
@@ -28,8 +28,8 @@ export class ConversorService {
     const params = `?base=${conversao.moedaDe}&symbols=${conversao.moedaPara}`;
     return this.http
       .get(this.BASE_URL + params)
-      .pipe(map(response => response.json() as ConversaoResponse),
-        catchError(error => Observable.throw(error)));
+      .pipe(map((response: HttpResponse<any>) => response.body.json() as ConversaoResponse),
+      catchError(error => Observable.throw(error)));
   }
 
   /**
@@ -56,12 +56,12 @@ export class ConversorService {
    */
   cotacaoDe(conversaoResponse: ConversaoResponse,
             conversao: Conversao) {
-      if(conversaoResponse === undefined) {
-        return '0';
-      }
+    if (conversaoResponse === undefined) {
+      return '0';
+    }
 
-      return (1 / conversaoResponse.rates[conversao.moedaPara])
-        .toFixed(4);
+    return (1 / conversaoResponse.rates[conversao.moedaPara])
+      .toFixed(4);
   }
 
   /**
