@@ -12,11 +12,11 @@ export class MoedaService {
   constructor() { }
 
   private moedasObj = [
-    { "sigla": 'AUD', 'descricao': 'Dólar australiano' },
-    { "sigla": 'BGN', 'descricao': 'Lev búlgaro' },
-    { "sigla": 'BRL', 'descricao': 'Real Brasileiro' },
-    { "sigla": 'CAD', 'descricao': 'Dólar australiano' },
-    { "sigla": 'CHF', 'descricao': 'Franco suíço' }
+    { 'sigla': 'AUD', 'descricao': 'Dólar australiano' },
+    { 'sigla': 'BGN', 'descricao': 'Lev búlgaro' },
+    { 'sigla': 'BRL', 'descricao': 'Real Brasileiro' },
+    { 'sigla': 'CAD', 'descricao': 'Dólar australiano' },
+    { 'sigla': 'CHF', 'descricao': 'Franco suíço' }
   ];
 
   listarTodas(): Moeda[] {
