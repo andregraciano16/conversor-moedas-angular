@@ -33,4 +33,10 @@
         {{ conversaoResponse | json }}
     </form>
   </div>
+  <modal-cotacao
+    [id]="'modalCotacao'"
+    [conversaoresponse]="conversaoResponse"
+    [conversao]="conversao"
+    (onConfirm)="init()">
+  </modal-cotacao>
 </div>
