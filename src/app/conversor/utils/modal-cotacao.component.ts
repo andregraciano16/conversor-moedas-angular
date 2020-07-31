@@ -12,7 +12,7 @@ export class ModalCotacaoComponent implements OnInit {
   @Input() id: string;
   @Input() conversaoResponse: ConversaoResponse;
   @Input() conversao: Conversao = new Conversao();
-  @Output() onConfirm = new EventEmitter<any>();
+  @Output() confirm = new EventEmitter<any>();
 
   constructor(private conversaoService: ConversorService) { }
 
@@ -20,7 +20,7 @@ export class ModalCotacaoComponent implements OnInit {
   }
 
   novaConsulta() {
-    this.onConfirm.emit();
+    this.confirm.emit();
   }
 
   get valorConvertido(): string {
@@ -49,6 +49,4 @@ export class ModalCotacaoComponent implements OnInit {
       this.conversaoResponse
     );
   }
-}
-
 }
