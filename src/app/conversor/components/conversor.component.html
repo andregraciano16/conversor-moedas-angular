@@ -33,10 +33,10 @@
         {{ conversaoResponse | json }}
     </form>
   </div>
-  <modal-cotacao
+  <app-modal-cotacao
     [id]="'modalCotacao'"
-    [conversaoresponse]="conversaoResponse"
+    [conversaoResponse]="conversaoResponse"
     [conversao]="conversao"
     (confirm)="init()">
-  </modal-cotacao>
+  </app-modal-cotacao>
 </div>
