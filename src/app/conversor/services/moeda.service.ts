@@ -16,7 +16,8 @@ export class MoedaService {
     { sigla: 'BGN', descricao: 'Lev búlgaro' },
     { sigla: 'BRL', descricao: 'Real Brasileiro' },
     { sigla: 'CAD', descricao: 'Dólar australiano' },
-    { sigla: 'CHF', descricao: 'Franco suíço' }
+    { sigla: 'CHF', descricao: 'Franco suíço' },
+    { sigla: 'EUR', descricao: 'Euro'}
   ];
 
   listarTodas(): Moeda[] {

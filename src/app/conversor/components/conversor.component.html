@@ -15,7 +15,7 @@
         placeholder="0"
         [(ngModel)]="conversao.valor"
         appNumero
-        required>{{ conversao.valor }}
+        required>
       <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
       <select name="moedaDe" class="form-control" [(ngModel)]="conversao.moedaDe" required>
         <option *ngFor="let moeda of moedas" [value]="moeda.sigla">

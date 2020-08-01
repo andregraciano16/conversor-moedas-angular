@@ -16,7 +16,7 @@ export class ConversorComponent implements OnInit {
   possuiErro: boolean;
   conversaoResponse: ConversaoResponse;
 
-  @ViewChild('conversaoForm') conversaoForm: NgForm;
+  @ViewChild('conversaoForm', { static: true }) conversaoForm: NgForm;
 
   constructor(
     private moedaService: MoedaService,
