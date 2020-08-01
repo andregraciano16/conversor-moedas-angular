@@ -10,7 +10,12 @@ import { ModalCotacaoComponent } from './utils';
 import { DataBrPipe } from './pipes';
 
 @NgModule({
-  declarations: [ConversorComponent, NumeroDirective, ModalCotacaoComponent, DataBrPipe],
+  declarations: [
+    ConversorComponent,
+    NumeroDirective,
+    ModalCotacaoComponent,
+    DataBrPipe
+  ],
   imports: [
     CommonModule,
     HttpClientModule,

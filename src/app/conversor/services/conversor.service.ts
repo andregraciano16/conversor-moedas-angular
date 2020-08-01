@@ -41,9 +41,11 @@ export class ConversorService {
    */
   cotacaoPara(conversaoResponse: ConversaoResponse,
               conversao: Conversao): number {
-    if (ConversaoResponse === undefined) {
+    if (conversaoResponse === undefined) {
       return 0;
     }
+    console.log(conversaoResponse);
+    console.log(conversao.moedaPara);
     return conversaoResponse.rates[conversao.moedaPara];
   }
 
